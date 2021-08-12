@@ -10,13 +10,9 @@ environment:
     PYTHONUNBUFFERED: 1
     EMBEDDED_LIB: 1
     SYSTEM_LIBSSH2: 1
-    PYPI_USER:
-      secure: WKF8ok0UPIgkA+isDUuHww==
-    PYPI_PASS:
-      secure: uXkrTaPGSNQdXTJIt3aiyyGnH/ZtvWbDVIXdMrsgwROIJ0kprWp5crS6TAqqddyrFxd7Trrfjg/TjM1/Yx9JzfuKTfoJh1zyviWD/j2zibsycmJQy4Q+CrZ6uI3IRQwe/2ILKxGzLGFBWaqt6C8NaQnkKP+h7ptnPeVhy1+kaOaJowwrCKWje1Ag3CJCAJxPjSC8yl1nlM3DA1rAIk2C5SR4eQQLJeEpPSg3nDnxR4o4YjmA7ILD3OuM1Fbh5iue/rUvWzdt6QCxCbE4egtrCQ==
     # Default python version to run single commands with
-    PYTHON_DEF: "C:\\Python38-x64"
-    PYTHON_VERSION: "3.8"
+    PYTHON_DEF: "C:\\Python27-x64"
+    PYTHON_VERSION: "2.7"
     # Python versions to build wheels for
     PYTHONVERS: C:\Python27-x64 C:\Python27
     PYTHON_ARCH: "64"
@@ -81,4 +77,4 @@ artifacts:
 deploy_script:
   # Calling twine requires we set path
   - "SET PATH=%PYTHON_DEF%;%PYTHON_DEF%\\Scripts;%PATH%"
-  - python ci/appveyor/pypi_upload.py *.whl
+  # - python ci/appveyor/pypi_upload.py *.whl
